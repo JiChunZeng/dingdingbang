@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/ll_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@null"
+            android:padding="10dp"
+            android:src="@drawable/icon_fanghui" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/title"
+            android:textColor="@color/color_font_big_title_grey"
+            android:textSize="@dimen/text_size_18" />
+
+        <ImageView
+            android:id="@+id/iv_front"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@null"
+            android:padding="10dp"
+            android:src="@drawable/icon_item_back"
+            android:visibility="invisible" />
+        <!--问号图片-->
+        <ImageView
+            android:id="@+id/iv_doubt"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@null"
+            android:padding="10dp"
+            android:src="@drawable/credit_register_doubt"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</layout>

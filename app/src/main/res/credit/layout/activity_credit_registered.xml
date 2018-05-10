@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bottom_background"
+        android:orientation="vertical"
+        tools:context=".mvp.credit.view.CreditRegisteredActivity">
+
+        <include
+            android:id="@+id/layout_common_title"
+            layout="@layout/layout_common_title" />
+
+        <include
+            android:id="@+id/layout_credit_register_basic"
+            layout="@layout/layout_credit_register_basic" />
+
+        <include
+            android:id="@+id/layout_credit_register_supplementary"
+            layout="@layout/layout_credit_register_supplementary" />
+
+        <include
+            android:id="@+id/layout_credit_register_finish"
+            layout="@layout/layout_credit_register_finish" />
+
+    </LinearLayout>
+</layout>

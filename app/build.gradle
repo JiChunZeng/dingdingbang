@@ -1,0 +1,155 @@
+apply plugin: 'com.android.application'
+
+def releaseTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
+}
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion "27.0.0"
+    defaultConfig {
+        applicationId "com.dingtaifu.dingdingbang"
+        minSdkVersion 21
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("dingdingbang.jks")
+            storePassword "dingdingbang"
+            keyAlias "鼎鼎帮"
+            keyPassword "dingdingbang"
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            // 不显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            //是否混淆
+            minifyEnabled true
+            //是否进行zipalign优化
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    def outputFile = output.outputFile
+                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                        // 输出apk名称为zejian_v1.0_2015-01-15_wandoujia.apk
+                        def fileName = "dingdingbang_V${defaultConfig.versionName}_${releaseTime()}.apk"
+                        output.outputFile = new File(outputFile.parent, fileName)
+                    }
+                }
+            }
+        }
+
+
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+            res.srcDirs =
+                    [
+                            'src/main/res/',
+                            'src/main/res/main',
+                            'src/main/res/splash',
+                            'src/main/res/identify',
+                            'src/main/res/login',
+                            'src/main/res/information',
+                            'src/main/res/credit',
+                            'src/main/res/customer_service',
+                            'src/main/res/share',
+                    ]
+        }
+    }
+
+    //配置多渠道
+    productFlavors {
+        releas {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+        }
+    }
+//    lintOptions {
+////平台
+//    productFlavors {
+//        beta {}//测试环境平台
+//        prod {}//生产环境平台
+//    }
+//    productFlavors.all { flavor ->
+//        flavor.manifestPlaceholders =[APP_PLATFORM_KEY_VALUE: name]//name代表的是"beta"，"prod"，即productFlavors中的每个声明
+//    }
+////输出指定名称apk
+//    android.applicationVariants.all { variant ->
+//        variant.outputs.each { output ->
+//            def outputFile = output.outputFile
+//            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+//                File outputDirectory = new File(outputFile.parent);
+//                def fileName
+//                if (variant.buildType.name == "release") {
+//                    //apk名称为：前缀_渠道名称_版本号_版本名称_模式.apk
+//                    fileName = "dingdingbang_${versionName}_release.apk"
+//                } else {
+//                    fileName = "dingdingbang_${versionName}_debug.apk"
+//                }
+//                output.outputFile = new File(outputDirectory, fileName)
+//            }
+//        }
+//    }
+    packagingOptions {//加上这写代码
+        pickFirst 'META-INF/*'
+    }
+
+    // 解决 native libraries 不支持cpu的体系结构。允许模拟器调试
+//    splits {
+//        abi {
+//            enable true
+//            reset()
+//            include 'x86', 'armeabi-v7a','x86_64'
+//            universalApk true
+//        }
+//    }/
+}
+
+
+dependencies {
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile project(':takephoto_library')
+    //    androidTestCompile 'com.android.support.test:runner:1.0.1'
+//    androidTestCompile 'com.android.support.test.espresso:espresso-core:3.0.1'
+    compile files('libs/afinal_0.5.1_bin.jar')
+    compile project(path: ':radarviewlib')
+    compile 'com.android.support:design:27.1.1'
+    compile 'de.hdodenhof:circleimageview:2.2.0'
+    compile 'com.tencent.bugly:crashreport:latest.release'
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.3.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    compile 'com.android.support.constraint:constraint-layout:1.1.0'
+    compile 'cn.pedant.sweetalert:library:1.3'
+    compile 'com.android.support:cardview-v7:27.1.1'
+    compile 'com.github.bumptech.glide:glide:4.7.1'
+    compile 'com.android.support:appcompat-v7:27.1.1'
+    compile 'org.xutils:xutils:3.4.0'
+    compile 'org.greenrobot:eventbus:3.1.1'
+    testCompile 'junit:junit:4.12'
+}

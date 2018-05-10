@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#160e23"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:onClick="click_to_sign_in"
+                android:padding="10dp"
+                android:src="@drawable/sign_in" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:lineSpacingMultiplier="0.8"
+                android:text="@string/app_name"
+                android:textColor="@color/color_font_big_title_grey"
+                android:textSize="@dimen/text_size_18"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_credit_query"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/tv_title"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="18dp"
+                android:lineSpacingMultiplier="0.8"
+                android:onClick="CreditQuery"
+                android:text="征信查询"
+                android:textColor="#8cd8c6"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tl_main"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:background="#160e23"
+            app:tabIndicatorColor="#8cd8c6"
+            app:tabIndicatorHeight="3dp"
+            app:tabSelectedTextColor="#8cd8c6"
+            app:tabTextColor="#493e5c">
+
+            <android.support.design.widget.TabItem
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <android.support.design.widget.TabItem
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <android.support.design.widget.TabItem
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </android.support.design.widget.TabLayout>
+
+        <com.dingtaifu.dingdingbang.widgets.NoScrollViewPager
+            android:id="@+id/vp_main"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+        </com.dingtaifu.dingdingbang.widgets.NoScrollViewPager>
+
+    </LinearLayout>
+
+</layout>

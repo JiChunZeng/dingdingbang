@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bottom_background"
+    tools:context="com.dingtaifu.dingdingbang.mvp.main.view.activity.QuestionActivity">
+    <include
+        android:id="@+id/common_title"
+        layout="@layout/layout_common_title" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_above="@+id/btn_credit_login_commit"
+        android:layout_below="@+id/tv_credit_login_tip">
+        <LinearLayout
+            android:id="@+id/rv_credit_login_tip_question"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp" />
+    </ScrollView>
+    <Button
+        android:id="@+id/btn_credit_login_commit"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/button_login"
+        android:text="提交"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_18" />
+</LinearLayout>
+</layout>

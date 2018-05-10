@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+    <data>
+
+        <variable
+            name="inputReportCodeActivity"
+            type="com.dingtaifu.dingdingbang.mvp.credit.view.InputReportCodeActivity" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bottom_background"
+        android:orientation="vertical"
+        tools:context=".mvp.credit.view.InputReportCodeActivity">
+
+        <include
+            android:id="@+id/common_title"
+            layout="@layout/layout_common_title" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="您已开通快捷查询，获取短信验证码提交，可获得查询信用报告的身份验证码"
+            android:textColor="@color/color_font_grey" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_input_report_verification_code"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请输入短信验证码"
+                android:maxLength="6"
+                android:textColor="@color/text_grey"
+                android:textColorHint="@color/text_grey"
+                android:textSize="@dimen/text_size_14" />
+
+            <TextView
+                android:id="@+id/tv_input_report_verification_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_login"
+                android:padding="7dp"
+                android:text="获取验证码"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginBottom="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/divider_horizontal" />
+
+        <Button
+            android:id="@+id/btn_input_report_commit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:background="@drawable/button_login"
+            android:text="提交"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</layout>
+
+

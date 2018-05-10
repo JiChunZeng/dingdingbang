@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data/>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#2b2b2d"
+        tools:context="com.dingtaifu.dingdingbang.mvp.identify.view.IdentifyProfileActivity">
+
+        <RelativeLayout
+            android:id="@+id/rl_actionbar"
+            android:layout_width="match_parent"
+            android:layout_height="64dp">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/icon_fanghui"/>
+        </RelativeLayout>
+
+        <LinearLayout
+
+            android:layout_width="339dp"
+            android:layout_height="466dp"
+            android:layout_below="@id/rl_actionbar"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/bg_profile_edit"
+            android:orientation="vertical"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="12dp"
+                android:layout_marginTop="18dp"
+                android:text="身份信息填写"
+                android:textColor="#181818"
+                android:textSize="16sp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="#181818"/>
+
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        style="@style/style_rl_profile_edit"
+                        android:layout_height="37dp">
+
+                        <TextView
+                            style="@style/style_profile_tv"
+                            android:text="姓名"/>
+
+                        <EditText
+                            android:id="@+id/et_profile_name"
+                            style="@style/style_profile_et"
+                            android:hint="请输入姓名"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        style="@style/style_rl_profile_edit"
+                        android:layout_height="37dp">
+
+                        <TextView
+                            style="@style/style_profile_tv"
+                            android:text="学历"/>
+
+                        <EditText
+                            android:id="@+id/et_profile_education"
+                            style="@style/style_profile_et"
+                            android:hint="请输入学历"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        style="@style/style_rl_profile_edit"
+                        android:layout_height="37dp">
+
+                        <TextView
+                            style="@style/style_profile_tv"
+                            android:text="婚姻"/>
+
+                        <EditText
+                            android:id="@+id/et_profile_marriage"
+                            style="@style/style_profile_et"
+                            android:hint="点击输入"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        style="@style/style_rl_profile_edit"
+                        android:layout_height="37dp">
+
+                        <TextView
+                            style="@style/style_profile_tv"
+                            android:text="身份证"/>
+
+                        <EditText
+                            android:id="@+id/et_profile_idcard"
+                            style="@style/style_profile_et"
+                            android:hint="请输入身份证号"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        style="@style/style_rl_profile_edit"
+                        android:layout_height="66dp">
+
+                        <TextView
+                            style="@style/style_profile_tv"
+                            android:text="身份证正面"/>
+
+                        <ImageView
+                            android:id="@+id/iv_idcard"
+                            style="@style/style_profile_iv"
+                            android:src="@drawable/idcard"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        style="@style/style_rl_profile_edit"
+                        android:layout_height="66dp">
+
+                        <TextView
+                            style="@style/style_profile_tv"
+                            android:text="身份证反面"/>
+
+                        <ImageView
+                            android:id="@+id/iv_idcard_back"
+                            style="@style/style_profile_iv"
+                            android:src="@drawable/idcard_back"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        style="@style/style_rl_profile_edit"
+                        android:layout_height="66dp">
+
+                        <TextView
+                            style="@style/style_profile_tv"
+                            android:text="人脸照片"/>
+
+                        <ImageView
+                            android:id="@+id/iv_face"
+                            style="@style/style_profile_iv"
+                            android:src="@drawable/face"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        style="@style/style_rl_profile_edit"
+                        android:layout_height="117dp">
+
+                        <TextView
+                            style="@style/style_profile_tv"
+                            android:text="现居地址"/>
+
+                        <EditText
+                            android:id="@+id/et_profile_address"
+                            style="@style/style_profile_et"
+                            android:hint="请输入详细地址"/>
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="3dp"
+                        android:background="#181818"/>
+
+                    <RelativeLayout
+                        style="@style/style_rl_profile_edit"
+                        android:layout_height="37dp">
+
+                        <TextView
+                            style="@style/style_profile_tv"
+                            android:text="紧急联系人1"/>
+
+                        <EditText
+                            android:id="@+id/et_profile_emergency1_relation"
+                            style="@style/style_profile_et"
+                            android:hint="请填写与本人关系"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        style="@style/style_rl_profile_edit"
+                        android:layout_height="37dp">
+
+                        <TextView
+                            style="@style/style_profile_tv"
+                            android:text="姓名"/>
+
+                        <EditText
+                            android:id="@+id/et_profile_emergency1_name"
+                            style="@style/style_profile_et"
+                            android:hint="TA的姓名"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        style="@style/style_rl_profile_edit"
+                        android:layout_height="37dp">
+
+                        <TextView
+                            style="@style/style_profile_tv"
+                            android:text="手机号"/>
+
+                        <EditText
+                            android:id="@+id/et_profile_emergency1_phone"
+                            style="@style/style_profile_et"
+                            android:hint="请输入手机号码"/>
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="3dp"
+                        android:background="#181818"/>
+
+                    <RelativeLayout
+                        style="@style/style_rl_profile_edit"
+                        android:layout_height="37dp">
+
+                        <TextView
+                            style="@style/style_profile_tv"
+                            android:text="紧急联系人2"/>
+
+                        <EditText
+                            android:id="@+id/et_profile_emergency2_relation"
+                            style="@style/style_profile_et"
+                            android:hint="请填写与本人关系"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        style="@style/style_rl_profile_edit"
+                        android:layout_height="37dp">
+
+                        <TextView
+                            style="@style/style_profile_tv"
+                            android:text="姓名"/>
+
+                        <EditText
+                            android:id="@+id/et_profile_emergency2_name"
+                            style="@style/style_profile_et"
+                            android:hint="TA的姓名"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        style="@style/style_rl_profile_edit"
+                        android:layout_height="37dp">
+
+                        <TextView
+                            style="@style/style_profile_tv"
+                            android:text="手机号"/>
+
+                        <EditText
+                            android:id="@+id/et_profile_emergency2_phone"
+                            style="@style/style_profile_et"
+                            android:hint="请输入手机号码"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_finish_profile"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="19dp"
+            android:layout_marginLeft="19dp"
+            android:layout_marginRight="19dp"
+            android:background="@drawable/button4"
+            android:text="完 成"
+            android:textColor="#fff"
+            android:textSize="15sp"/>
+    </RelativeLayout>
+</layout>

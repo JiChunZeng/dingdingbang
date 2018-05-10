@@ -1,0 +1,188 @@
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#160e23"
+        android:orientation="vertical"
+        android:padding="10dp"
+        tools:context="com.dingtaifu.dingdingbang.mvp.main.view.fragment.EvaluateFragment">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_gravity="center">
+
+            <com.example.radarviewlib.RadarView
+                android:rotation="45"
+                android:id="@+id/radarView"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:gravity="center"
+                app:layer_line_color="#483e56"
+                app:layer_line_width="1dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:radar_layer="5"
+                app:rotation_enable="false"
+                app:vertex_icon_margin="0dp"
+                app:vertex_icon_position="top"
+                app:vertex_icon_size="0dp"
+                app:vertex_line_color="#483e56"
+                app:vertex_line_width="1dp"
+                app:vertex_text_color="@color/bottom_background"
+                app:vertex_text_offset="0dp"
+
+                 />
+
+            <TextView
+                android:id="@+id/expand_listview_ferformance_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="履约"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="0dp" />
+
+            <TextView
+                android:id="@+id/expand_listview_ferformance_tvs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FERFORMANCE"
+                android:textColor="@color/color_font_big_title_grey"
+                app:layout_constraintStart_toStartOf="@+id/expand_listview_ferformance_tv"
+                app:layout_constraintTop_toBottomOf="@+id/expand_listview_ferformance_tv"
+                tools:layout_editor_absoluteX="0dp" />
+
+            <TextView
+                android:id="@+id/expand_listview_history_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="历史"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="@+id/expand_listview_history_tvs"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="327dp" />
+
+            <TextView
+                android:id="@+id/expand_listview_history_tvs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HISTORY"
+                android:textColor="@color/color_font_big_title_grey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/expand_listview_history_tv"
+                tools:layout_editor_absoluteX="327dp" />
+
+            <TextView
+                android:id="@+id/expand_listview_investigation_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="调查"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toTopOf="@+id/expand_listview_investigation_tvs"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteX="0dp" />
+
+            <TextView
+                android:id="@+id/expand_listview_investigation_tvs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="INVESTIGATION"
+                android:textColor="@color/color_font_big_title_grey"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/expand_listview_investigation_tv"
+                tools:layout_editor_absoluteX="0dp" />
+
+            <TextView
+                android:id="@+id/expand_listview_liabilities_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="负债"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toTopOf="@+id/expand_listview_liabilities_tvs"
+                app:layout_constraintStart_toStartOf="@+id/expand_listview_liabilities_tvs"
+                tools:layout_editor_absoluteX="313dp" />
+
+            <TextView
+                android:id="@+id/expand_listview_liabilities_tvs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="LIABILITIES"
+                android:textColor="@color/color_font_big_title_grey"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:layout_editor_absoluteX="313dp" />
+        </android.support.constraint.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/wenjuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/evaluate_paper"
+                android:drawablePadding="15dp"
+                android:gravity="left|bottom"
+                android:padding="15dp"
+                android:text="问卷"
+                android:textColor="@color/color_font_big_title_grey" />
+
+            <TextView
+                android:id="@+id/zonghexinyong"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right|center"
+                android:padding="15dp"
+                android:text="信用等级:AAA"
+                android:textColor="#8cd8c6" />
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#483e56" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ExpandableListView
+                android:id="@+id/expandablelistview_ferformance"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ExpandableListView
+                android:id="@+id/expandableListView_history"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ExpandableListView
+                android:id="@+id/expandableListView_investigation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                />
+
+            <ExpandableListView
+                android:id="@+id/expandableListView_liabilities"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </FrameLayout>
+    </LinearLayout>
+
+</layout>
+

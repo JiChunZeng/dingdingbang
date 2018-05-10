@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data/>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#2b2b2d"
+        tools:context="com.dingtaifu.dingdingbang.mvp.identify.view.IdentifyCarrierActivity">
+
+        <RelativeLayout
+            android:id="@+id/rl_actionbar"
+            android:layout_width="match_parent"
+            android:layout_height="64dp">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/icon_fanghui"/>
+        </RelativeLayout>
+
+        <LinearLayout
+
+            android:layout_width="339dp"
+            android:layout_height="466dp"
+            android:layout_below="@id/rl_actionbar"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/bg_profile_edit"
+            android:orientation="vertical"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="12dp"
+                android:layout_marginTop="18dp"
+                android:text="手机运营商信息填写"
+                android:textColor="#181818"
+                android:textSize="16sp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="#181818"/>
+
+            <RelativeLayout
+                style="@style/style_rl_profile_edit"
+                android:layout_height="37dp">
+
+                <TextView
+                    style="@style/style_profile_tv"
+                    android:text="手机号码"/>
+
+                <EditText
+                    android:id="@+id/et_work_carrier_name"
+                    style="@style/style_profile_et"
+                    android:hint="请输入手机号码"/>
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="3dp"
+                android:background="#181818"/>
+
+            <RelativeLayout
+                style="@style/style_rl_profile_edit"
+                android:layout_height="37dp">
+
+                <TextView
+                    style="@style/style_profile_tv"
+                    android:text="服务密码"/>
+
+                <EditText
+                    android:id="@+id/et_carrier_password"
+                    style="@style/style_profile_et"
+                    android:hint="请填写手机运营商服务密码"/>
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="3dp"
+                android:background="#181818"/>
+
+            <TextView
+                android:layout_marginLeft="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="· 如果忘记服务密码，可拨打运营商任工客服电话获取"
+                android:textColor="#464545"
+                android:textSize="9sp"/>
+
+            <TextView
+                android:layout_marginLeft="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="· 中国移动    10086"
+                android:textColor="#464545"
+                android:textSize="9sp"/>
+
+            <TextView
+                android:layout_marginLeft="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="   中国联通    10010"
+                android:textColor="#464545"
+                android:textSize="9sp"/>
+
+            <TextView
+                android:layout_marginLeft="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="   中国电信    10000"
+                android:textColor="#464545"
+                android:textSize="9sp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="#181818"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_finish_carrier"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="19dp"
+            android:layout_marginLeft="19dp"
+            android:layout_marginRight="19dp"
+            android:background="@drawable/button4"
+            android:text="完 成"
+            android:textColor="#fff"
+            android:textSize="15sp"/>
+    </RelativeLayout>
+</layout>

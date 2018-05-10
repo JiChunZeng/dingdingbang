@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">鼎鼎帮</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title">Title</string>
+    <string name="phone_number">手机号码</string>
+    <string name="verification_code">验证码</string>
+    <string name="login_name">登录名</string>
+    <string name="name">姓名</string>
+    <string name="login">登录</string>
+    <string name="basic_information">基本信息</string>
+    <string name="supplementary_information">补充信息</string>
+    <string name="finish_register">完成注册</string>
+    <string name="to_login">已有账户，立即登录</string>
+    <string name="next">下一步</string>
+    <string name="Input_verification_code">请输入验证码</string>
+    <string name="Input_ID">请输入真实身份证号</string>
+    <string name="Input_name">请输入真实姓名</string>
+    <string name="ID">身份证号</string>
+    <string name="password">密码</string>
+    <string name="number_X">1234567890Xx</string>
+    <string name="number">1234567890</string>
+
+    <string name="test">人之初，性本善。性相近，习相远。\n　　苟不教，性乃迁。教之道，贵以专。\n　　昔孟母，择邻处，子不学，断机杼。\n　　窦燕山，有义方，教五子，名俱扬。</string>
+    <string name="answer_1">用户注册后登录，进行身份验证，通过验证的用户成功提交查询申请。信用信息加工完毕后（一般在成功提交查询申请后的第二天），平台会向用户发送含身份验证码的短信。用户可在收到身份验证码的7天内，登录平台使用身份验证码查询结果。</string>
+</resources>

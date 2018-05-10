@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="shareActivity"
+            type="com.dingtaifu.dingdingbang.mvp.share.view.ShareActivity" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".mvp.share.view.ShareActivity">
+
+
+        <ImageView
+            android:id="@+id/iv_share_picture"
+            scaleType="fitXY"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/share"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="8dp" />
+
+        <include
+            android:id="@+id/layout_common_title"
+            layout="@layout/layout_common_title"
+
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <TextView
+            android:id="@+id/tv_share_date_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="30"
+            android:textColor="#F5F4F0"
+            android:textSize="90sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="273dp" />
+
+        <TextView
+            android:id="@+id/tv_share_date_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="3."
+            android:textColor="#F5F4F0"
+            android:textSize="40sp"
+            app:layout_constraintEnd_toStartOf="@+id/tv_share_date_day"
+            app:layout_constraintTop_toTopOf="@+id/tv_share_date_day"
+            tools:layout_editor_absoluteX="240dp" />
+
+        <com.dingtaifu.dingdingbang.widgets.VerticalRotateTextView
+            android:id="@+id/tv_share_date_week"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fri"
+            android:textColor="#F5F4F0"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_share_date_month"
+            app:layout_constraintTop_toBottomOf="@+id/tv_share_date_month"
+            tools:layout_editor_absoluteX="238dp" />
+
+
+        <ImageView
+            android:id="@+id/iv_share_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:src="@drawable/share_share"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintStart_toEndOf="@+id/iv_share_camera"
+            tools:layout_editor_absoluteX="56dp" />
+
+        <ImageView
+            android:id="@+id/iv_share_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:src="@drawable/share_camera"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#F5F4F0"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_share_picture"
+            tools:layout_editor_absoluteX="0dp">
+
+            <ImageView
+                android:id="@+id/share_vtv"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                 />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom"
+                android:padding="20dp"
+                android:src="@drawable/share_logo" />
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+</layout>

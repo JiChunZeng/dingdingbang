@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data/>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#2b2b2d"
+        tools:context="com.dingtaifu.dingdingbang.mvp.identify.view.IdentifyWorkActivity">
+
+        <RelativeLayout
+            android:id="@+id/rl_actionbar"
+            android:layout_width="match_parent"
+            android:layout_height="64dp">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/icon_fanghui"/>
+        </RelativeLayout>
+
+        <LinearLayout
+
+            android:layout_width="339dp"
+            android:layout_height="466dp"
+            android:layout_below="@id/rl_actionbar"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/bg_profile_edit"
+            android:orientation="vertical"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="12dp"
+                android:layout_marginTop="18dp"
+                android:text="工作信息填写"
+                android:textColor="#181818"
+                android:textSize="16sp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="#181818"/>
+
+            <RelativeLayout
+                style="@style/style_rl_profile_edit"
+                android:layout_height="37dp">
+
+                <TextView
+                    style="@style/style_profile_tv"
+                    android:text="公司全称"/>
+
+                <EditText
+                    android:id="@+id/et_work_company_name"
+                    style="@style/style_profile_et"
+                    android:hint="请填写"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/style_rl_profile_edit"
+                android:layout_height="117dp">
+
+                <TextView
+                    style="@style/style_profile_tv"
+                    android:text="公司地址"/>
+
+                <EditText
+                    android:id="@+id/et_work_company_address"
+                    style="@style/style_profile_et"
+                    android:hint="请填写详细地址"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/style_rl_profile_edit"
+                android:layout_height="37dp">
+
+                <TextView
+                    style="@style/style_profile_tv"
+                    android:text="入职时间"/>
+
+                <EditText
+                    android:id="@+id/et_work_start_time"
+                    style="@style/style_profile_et"
+                    android:hint="请填写"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/style_rl_profile_edit"
+                android:layout_height="37dp">
+
+                <TextView
+                    style="@style/style_profile_tv"
+                    android:text="工作岗位"/>
+
+                <EditText
+                    android:id="@+id/et_work_position"
+                    style="@style/style_profile_et"
+                    android:hint="请填写"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/style_rl_profile_edit"
+                android:layout_height="37dp">
+
+                <TextView
+                    style="@style/style_profile_tv"
+                    android:text="月薪"/>
+
+                <EditText
+                    android:id="@+id/et_work_salary"
+                    style="@style/style_profile_et"
+                    android:hint="请填写"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/style_rl_profile_edit"
+                android:layout_height="37dp">
+
+                <TextView
+                    style="@style/style_profile_tv"
+                    android:text="公司座机"/>
+
+                <EditText
+                    android:id="@+id/et_work_phone"
+                    style="@style/style_profile_et"
+                    android:hint="请填写"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_finish_work"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="19dp"
+            android:layout_marginLeft="19dp"
+            android:layout_marginRight="19dp"
+            android:background="@drawable/button4"
+            android:text="完 成"
+            android:textColor="#fff"
+            android:textSize="15sp"/>
+    </RelativeLayout>
+</layout>

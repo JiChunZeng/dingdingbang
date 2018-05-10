@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bottom_background"
+        android:orientation="vertical"
+        tools:context=".mvp.credit.view.CreditLoginActivity">
+
+        <include
+            android:id="@+id/common_title"
+            layout="@layout/layout_common_title" />
+
+        <include
+            android:id="@+id/layout_credit_login_login"
+            layout="@layout/layout_credit_login_login" />
+
+        <include
+            android:id="@+id/layout_credit_login_identify"
+            layout="@layout/layout_credit_login_identify" />
+
+        <include
+            android:id="@+id/layout_credit_login_appling"
+            layout="@layout/layout_credit_login_appling" />
+
+        <include
+            android:id="@+id/layout_credit_login_getReport"
+            layout="@layout/layout_credit_login_getreport" />
+        <include
+            android:id="@+id/layout_recover_web"
+            layout="@layout/layout_recover_web"></include>
+        <include
+            android:id="@+id/layout_recover_banggain"
+            layout="@layout/layout_recover_banggain" />
+
+    </LinearLayout>
+</layout>

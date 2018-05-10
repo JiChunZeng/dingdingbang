@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="customerServiceActivity"
+            type="com.dingtaifu.dingdingbang.mvp.customer_service.view.CustomerServiceActivity" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        tools:context=".mvp.customer_service.view.CustomerServiceActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bottom_background"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/common_title"
+                layout="@layout/layout_common_title" />
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="15dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginBottom="20dp"
+                    android:src="@drawable/custom_service_banner"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/btn_service"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/btn_service"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/button_login"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="立即咨询"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tv_service_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:drawableLeft="@drawable/custom_service_question"
+                android:drawablePadding="15dp"
+                android:drawableRight="@drawable/icon_item_back"
+                android:gravity="center_vertical"
+                android:text="为什么我注册用户时被拒绝？"
+                android:textColor="@color/color_font_grey" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="50dp"
+                android:background="#483e56" />
+
+            <TextView
+                android:id="@+id/tv_service_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:drawableLeft="@drawable/custom_service_question"
+                android:drawablePadding="15dp"
+                android:drawableRight="@drawable/icon_item_back"
+                android:gravity="center_vertical"
+                android:text="忘记登录名怎么办？"
+                android:textColor="@color/color_font_grey" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="50dp"
+                android:background="#483e56" />
+
+            <TextView
+                android:id="@+id/tv_service_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:drawableLeft="@drawable/custom_service_question"
+                android:drawablePadding="15dp"
+                android:drawableRight="@drawable/icon_item_back"
+                android:gravity="center_vertical"
+                android:text="忘记密码怎么办？"
+                android:textColor="@color/color_font_grey" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="50dp"
+                android:background="#483e56" />
+
+            <TextView
+                android:id="@+id/tv_service_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:drawableLeft="@drawable/custom_service_question"
+                android:drawablePadding="15dp"
+                android:drawableRight="@drawable/icon_item_back"
+                android:gravity="center_vertical"
+                android:text="为什么我提交查询申请后，没有收到身份验证码？"
+                android:textColor="@color/color_font_grey" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="50dp"
+                android:background="#483e56" />
+
+            <TextView
+                android:id="@+id/tv_service_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:drawableLeft="@drawable/custom_service_question"
+                android:drawablePadding="15dp"
+                android:drawableRight="@drawable/icon_item_back"
+                android:gravity="center_vertical"
+                android:text="哪些情况需要身份验证？"
+                android:textColor="@color/color_font_grey" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="50dp"
+                android:background="#483e56" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="15dp"
+                android:padding="10dp"
+                android:text="其他咨询方式"
+                android:textColor="@color/color_font_grey" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#483e56" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/cl_service_wechat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/custom_service_wechat"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView11"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView7" />
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="8dp"
+                    android:text="微信公众号：鼎鼎帮"
+                    android:textColor="@color/text_grey"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView3"
+                    app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="10dp"
+                    android:text="微信咨询"
+                    android:textColor="@color/color_font_grey"
+                    app:layout_constraintStart_toEndOf="@+id/imageView3"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:src="@drawable/icon_item_back"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView11"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView7" />
+
+
+            </android.support.constraint.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tv_service_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="50dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="50dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="意见反馈"
+                android:textColor="@color/color_font_green" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</layout>
