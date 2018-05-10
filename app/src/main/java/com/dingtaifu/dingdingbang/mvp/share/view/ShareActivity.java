@@ -105,7 +105,7 @@ public class ShareActivity extends TakePhotoActivity implements View.OnClickList
             tvShareDateDay.setText("0"+calendar.get(Calendar.DAY_OF_MONTH));
         }
         tvShareDateWeek.setText(DateToWeek(date));
-        RequestParams params = new RequestParams(APP.dictum);
+//        RequestParams params = new RequestParams(APP.dictum);
         Random rand = new Random();
         int i = rand.nextInt(4);
         shareVtv.setImageDrawable(this.getResources().getDrawable(image[i]));

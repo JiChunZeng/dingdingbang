@@ -27,7 +27,7 @@ public interface APP {
     String queryLogin = url+"/app/queryLogin";
     String queryweb = url+"/app/continueBank";
     String bangGain = url + "/app/bangGain";
-    String dictum = url+"/app/dictum";
+//    String dictum = url+"/app/dictum";
     String questionnaire = url+"/app/questionnaire";
 
 
